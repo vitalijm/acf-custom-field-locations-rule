@@ -1,0 +1,6 @@
+_notes
+.DS_Store
+*.LCK
+*.svn
+/__assets
+*data.txt
