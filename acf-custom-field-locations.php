@@ -39,7 +39,8 @@
 			if (defined('DOING_AJAX') && 
 					DOING_AJAX && 
 					isset($_POST['action']) && 
-					substr($_POST['action'], 0, 3) == 'acf') {
+					($_POST['action'] == 'acf/field_group/render_location_value' || 
+						$_POST['action'] == 'acf/post/get_field_groups')) {
 				//$this->write_to_file('doing ajax');
 				//$this->write_to_file('DOING AJAX');
 				//$this->write_to_file($_POST);
@@ -139,7 +140,7 @@
 				$fields = acf_get_fields($group['key']);
 				//echo '<pre>'; print_r($fields); echo '</pre>';//
 				if (!count($fields)) {
-					return;
+					continue;
 				}
 				if ($group['ID'] == $this_group) {
 					$this->current_group = $group['key'];
