@@ -27,6 +27,8 @@
 				//for (i in e.$el) {
 				//	alert(i+':'+e.$el[i]);
 				//}
+				// this fires on every radio button
+				// if there are 5 buttons in radio field it will fire 5 times
 				var $container = e.$el.closest('.acf-field');
 				var $field = $container.attr('data-key');
 				var $ul = e.$el.closest('ul');
@@ -61,6 +63,8 @@
 				//for (i in e.$el) {
 				//	alert(i+':'+e.$el[i]);
 				//}
+				// this will fire for every checkbox
+				// if there are 5 choices in a checkbox field it will fire 5 times
 				var $container = e.$el.closest('.acf-field');
 				var $field = $container.attr('data-key');
 				var $ul = e.$el.closest('ul');
@@ -75,7 +79,10 @@
 				this.update($field, $value).fetch();
 			}
 		});
-	
+		
+		// these actions cuase acf to think the inputs have changed
+		// this causes the "Are you sure you want leave" messages
+		// to trigger even if no changes are made
 		$('.acf-field-select select').trigger('change');
 		$('.acf-field-checkbox input').trigger('change');
 		$('.acf-field-radio input').trigger('change');
