@@ -5,9 +5,13 @@
 		var acfCustomFieldLocatioRule = acf.ajax.extend({
 			events: {
 				'change .acf-field-select select': '_custom_field_location_change_select',
+				'ready .acf-field-select select': '_custom_field_location_change_select',
 				'change .acf-field-radio input': '_custom_field_location_change_radio',
+				'ready .acf-field-radio input': '_custom_field_location_change_radio',
 				'change .acf-field-true-false input': '_custom_field_location_change_true_false',
+				'ready .acf-field-true-false input': '_custom_field_location_change_true_false',
 				'change .acf-field-checkbox input': '_custom_field_location_change_checkox',
+				'ready .acf-field-checkbox input': '_custom_field_location_change_checkox',
 			},
 	
 			_custom_field_location_change_select: function(e){
@@ -83,9 +87,9 @@
 		// these actions cuase acf to think the inputs have changed
 		// this causes the "Are you sure you want leave" messages
 		// to trigger even if no changes are made
-		$('.acf-field-select select').trigger('change');
-		$('.acf-field-checkbox input').trigger('change');
-		$('.acf-field-radio input').trigger('change');
-		$('.acf-field-true-false input').trigger('change');
+		$('.acf-field-select select').trigger('ready');
+		$('.acf-field-checkbox input').trigger('ready');
+		$('.acf-field-radio input').trigger('ready');
+		$('.acf-field-true-false input').trigger('ready');
 	});
 	
