@@ -84,9 +84,7 @@
 			}
 		});
 		
-		// these actions cuase acf to think the inputs have changed
-		// this causes the "Are you sure you want leave" messages
-		// to trigger even if no changes are made
+		// triger actions when page is loaded
 		$('.acf-field-select select').trigger('ready');
 		$('.acf-field-checkbox input').trigger('ready');
 		$('.acf-field-radio input').trigger('ready');
