@@ -198,20 +198,4 @@
 		
 	} // end class acf_custom_field_location_rules
 	
-	
-	if (!function_exists('write_to_file')) {	
-		function write_to_file($value) {
-			$file = dirname(__FILE__).'/_acf-data.txt';
-			$handle = fopen($file, 'a');
-			ob_start();
-			if (is_array($value) || is_object($value)) {
-				print_r($value);
-			} else {
-				echo $value;
-			}
-			echo "\r\n";
-			fwrite($handle, ob_get_clean());
-			fclose($handle);
-		}
-	}
 ?>
