@@ -15,6 +15,6 @@ and be available to chooose from.
 
 ## Issues with the plugin
 
-It will slow down the loading of admin pages. Every choice field will trigger ACF run AJAX to check for
+It may slow down the loading of admin pages. Every choice field will trigger ACF to run AJAX to check for
 field groups to be shown. Worse than this, it will trigger this action for every choice in a radio or
-checkbox field.
+checkbox field. I'm not sure there's anything I can do to change this.
