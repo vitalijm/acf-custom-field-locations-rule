@@ -1,14 +1,17 @@
 # ACF Custom Field Location Rules
 
-Set ACF field group location based on select, checkbox, radion and true/false fields in other field groups.
+Set ACF field group location based on select, checkbox, radio and true/false fields in other field groups.
 
 ## How to use
 
-Create a field group with choice fields. When additional field groups the choice fields in other field
-groups will be detected and be available to chooose from.
+Create a field group with choice fields.
+
+When adding additional field groups the choice fields in other field groups will be detected 
+and be available to chooose from.
 
 * Only top level choice fields are available.
 * Repeaters and flexible content sub fields cannot be used.
+* The field that you are basing your location rule on must be in a field group on the same post. Any choice field can be selected but if it's not part of another field group on the same post then it woun't do anything.
 
 ## Issues with the plugin
 
